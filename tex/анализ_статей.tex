@@ -1,0 +1,120 @@
+
+\documentclass[12pt]{article}
+\usepackage{lingmacros}
+\usepackage{tree-dvips}
+
+\usepackage [T2A] {fontenc}   % Кириллица в PDF файле
+\usepackage [utf8] {inputenc} % Кодировка текста: utf-8
+\usepackage [russian] {babel} % Переносы, лигатуры
+
+\begin{document}
+
+\section*{Введение}
+
+\section{Анализ статей}
+
+\subsection{Linear-quadratic blind source separating structure for removing show-through in scanned documents}
+Сравнение алгоритма Hosseini and Deville с собственной разработанной моделью
+для удаления просвечивающейся сквозь лист информации.
+
+
+\subsection{A local linear level set method for the binarization of degraded historical document images}
+Представлен крутой метод для бинаризации текста (еще я там видел применение метода Sauvola) Но есть ограничения:
+\begin{list}{}{}
+    \item изображения хоть и содержат артефакты, но не содержат разницы освещения
+    \item сам текст достаточно высокого качества
+    \item их метод иногда отрабатывает хуже Sauvola
+\end{list}
+
+
+\subsection{Coupled snakelets for curled text-line segmentation from warped document images}
+Метод сегментации изображений фон и строки в повернутых и изогнутых документах, возможно, снятых под углом.
+Метод справляется хорошо, но интересно как это использовать для восстановления формы документа. + использовались
+хорошо банризованные изображения.
+
+
+\subsection{Clutter noise removal in binary document images}
+Авторы удаляют клюттер из изображений. Результат выглядит очень и очень достойным. Будет полезным для восстановления
+испорченных изображений (например, при бинаризации плохо пропечатанных документов, либо в плохом освещении).
+
+
+\subsection{Efficient skew detection of printed document images based on novel combination of enhanced profiles}
+Поворачивают изображения, причем бинаризованные и явно отсканированные (они ровные). Интересно, но
+мало применимо в моей работе. Работа \textbf{Skew detection and correction based on an axes-parallel bounding box}
+в ту же степь.
+
+
+
+\subsection{Degraded Historical Documents Images Binarization Using a Combination of Enhanced Techniques}
+Хорошо бинаризуют, но аж 3 метода используют.
+
+
+\subsection{Adaptive binarization of severely degraded and non-uniformly illuminated documents}
+Супер крутая статья. Начиная с того, что хорошо рассказывают про методы бинаризации, а также сравнивают их,
+заканчивая тем, что представляют алгоритм, который дает еще более кайфовые результаты. Точно буду использовать
+в работе. Как минимум, надо вставить описание методов. 
+
+
+\subsection{Resolution enhancement of textual images via multiple coupled 
+dictionaries and adaptive sparse representation selection}
+Рассказывают про методы интерполяции, а также про свою разработку на основе словарей. Интересно в качестве сравнения методов.
+
+
+\subsection{Skeletonization Algorithm for Binary Images}
+Похоже на простую (хоть и теративную) реализацию скелетинизации. \textbf{A new ring radius transform-based thinning method 
+for multi-oriented video characters} про сложную с восстановлением скелета.
+
+
+\subsection{Restoring camera-captured distorted document images}
+Поворот бинарного изображения с восстановлением перспективы. Однозначно будет полезно.
+
+
+\subsection{An experimental comparison of min-cut/max- flow algorithms for energy minimization in vision}
+Восстановление и сегментация изображения, сложно, но интересно.
+
+
+\subsection{Document image binarization based on topographic analysis using a water flow model}
+Результаты обработки достаточно интересны, а алгоритм не выглядит сложным. 
+
+
+\subsection{Text and non-text separation in offline document images: a survey}
+Объяснение кучи методов сегментации.
+
+
+\subsection{Binarization of degraded document images based on contrast enhancement}
+Еще один метод бинаризации. Вроде простой.
+
+
+\subsection{A restoration method for distorted comics to improve comic contents identification}
+Крутая обработка комиксов. Цветокоррекция, повороты и восстановления страницы. топчик.
+
+
+\subsection{Bleed-through cancellation in non-rigidly misaligned recto–verso 
+archival manuscripts based on local registration}
+Очень похоже на паралелльную обработку изображения для удаления просвеченного текста. Надо разбираться.
+
+
+\subsection{Coarse-to-fine document localization in natural scene 
+image with regional attention and recursive corner refinement}
+Есть рекурсивный алгоритм обнаружения границы, выглядит интересно. Но сложно.
+
+
+\subsection{Plug-and-play approach to class-adapted blind image deblurring}
+Убираем размытие на лицах и текста. Что-то сложное, да еще и с обучением, но результат хорош.
+Надо разбираться, если такая задача станет.
+
+
+\subsection{A comparison of local features for camera-based document image retrieval and spotting}
+Восстановление изображения из кучи маленьких. Сравнение алгоритмов. 
+
+
+
+\section{Погреб для нейронок}
+
+\subsection{Text recognition in multimedia documents: a study of two neural-based OCRs using and avoiding character segmentation}
+Выделяют отдельные символы нейронкой.
+
+\subsection{Fully convolutional network with dilated convolutions for handwritten text line segmentation}
+Сегментация изображения на линии.
+
+\end{document}
